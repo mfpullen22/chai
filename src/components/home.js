@@ -7,9 +7,10 @@ import {
 import BrainIcon from "../images/brain_icon.png";
 import Guidelines from "./guidelines";
 import Hero from "./hero";
+import Intro from "./intro";
 
 const navigation = [
-  { name: 'Guidelines', href: '#' },
+  { name: 'Guidelines', href: '#guidelines' },
   { name: 'CryptoMap', href: '#' },
   { name: 'About', href: '#' },
 ]
@@ -133,7 +134,8 @@ function Home() {
       <main>
         <Hero />            
         {/* More main page content here... */}
-        <Guidelines />
+        <Intro />
+        <Guidelines id="guidelines" />
       </main>
     </div>
   )

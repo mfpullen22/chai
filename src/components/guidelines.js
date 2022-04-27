@@ -45,46 +45,50 @@ function TabPanel(props) {
   
   export default function VerticalTabs() {
     const [value, setValue] = React.useState(0);
-  
+    
     const handleChange = (event, newValue) => {
       setValue(newValue);
     };
   
     return (
-        <div className="relative" >
-            <div className="max-w-7xl mx-auto my-10 sm:px-6 lg:px-8">
-            <Box
-                sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 400 }}>
-                <Tabs
-                    orientation="vertical"
-                    variant="scrollable"
-                    value={value}
-                    onChange={handleChange}
-                    aria-label="Vertical tabs example"
-                    sx={{ borderRight: 1, borderColor: 'divider' }}>
-                    <Tab label="Screening and Prevention" {...a11yProps(0)} />
-                    <Tab label="Diagnosis" {...a11yProps(1)} />
-                    <Tab label="Treatment" {...a11yProps(2)} />
-                    <Tab label="Monitoring" {...a11yProps(3)} />
-                    <Tab label="ART Initiation" {...a11yProps(4)} />
-                </Tabs>
-                <TabPanel value={value} index={0}>
-                    <Screening />
-                </TabPanel>
-                <TabPanel value={value} index={1}>
-                    <Diagnosis />
-                </TabPanel>
-                <TabPanel value={value} index={2}>
-                    <Treatment />
-                </TabPanel>
-                <TabPanel value={value} index={3}>
-                    <Monitoring />
-                </TabPanel>
-                <TabPanel value={value} index={4}>
-                    <ARTInitiation />
-                </TabPanel>
-            </Box>
+        <div className="bg-white overflow-hidden">
+            <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+                <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen" />
+                    <p className="text-2xl">Guidelines</p>
+                    <Box
+                        sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 400 }}>
+                        <Tabs
+                            orientation="vertical"
+                            variant="scrollable"
+                            value={value}
+                            onChange={handleChange}
+                            aria-label="Vertical tabs"
+                            textColor="primary"
+                            indicatorColor="primary"
+                            sx={{ borderRight: 1, borderColor: 'divider'}}>
+                            <Tab label="Screening and Prevention" {...a11yProps(0)} />
+                            <Tab label="Diagnosis" {...a11yProps(1)} />
+                            <Tab label="Treatment" {...a11yProps(2)} />
+                            <Tab label="Monitoring" {...a11yProps(3)} />
+                            <Tab label="ART Initiation" {...a11yProps(4)} />
+                        </Tabs>
+                        <TabPanel value={value} index={0}>
+                            <Screening />
+                        </TabPanel>
+                        <TabPanel value={value} index={1}>
+                            <Diagnosis />
+                        </TabPanel>
+                        <TabPanel value={value} index={2}>
+                            <Treatment />
+                        </TabPanel>
+                        <TabPanel value={value} index={3}>
+                            <Monitoring />
+                        </TabPanel>
+                        <TabPanel value={value} index={4}>
+                            <ARTInitiation />
+                        </TabPanel>
+                    </Box>
+                </div>
             </div>
-      </div>
     );
   }
