@@ -8,6 +8,7 @@ import BrainIcon from "../images/brain_icon.png";
 import Guidelines from "./guidelines";
 import Hero from "./hero";
 import Intro from "./intro";
+import HRbrain from "../ui/hrbrain";
 
 const navigation = [
   { name: 'Guidelines', href: '#guidelines' },
@@ -135,6 +136,7 @@ function Home() {
         <Hero />            
         {/* More main page content here... */}
         <Intro />
+        <HRbrain />
         <Guidelines id="guidelines" />
       </main>
     </div>
