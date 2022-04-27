@@ -138,6 +138,7 @@ function Home() {
         <Intro />
         <HRbrain />
         <Guidelines id="guidelines" />
+        <HRbrain />
       </main>
     </div>
   )

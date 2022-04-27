@@ -53,11 +53,11 @@ function TabPanel(props) {
     return (
         <section
         aria-labelledby="collection-heading"
-        className="max-w-xl mx-auto pt-24 px-4 sm:pt-24 sm:px-24 lg:max-w-7xl lg:px-8">
+        className="max-w-xl mx-auto pt-18 px-4 sm:pt-10 sm:px-20 lg:max-w-7xl lg:px-8">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
                 Cryptococcal Meningitis Guidelines
             </h2>
-            <p className="my-4 text-xl text-gray-500">
+            <p className="mt-0 mb-8 text-xl text-gray-500">
                 Diagnosis, Management, and Monitoring
             </p>
                 <Box
