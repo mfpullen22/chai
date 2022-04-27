@@ -51,11 +51,15 @@ function TabPanel(props) {
     };
   
     return (
-        <div className="bg-white overflow-hidden">
-            <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-                <h3 className="my-2 text3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl z-50">
-                    Guidelines for Diagnosis and Management
-                 </h3>
+        <section
+        aria-labelledby="collection-heading"
+        className="max-w-xl mx-auto pt-24 px-4 sm:pt-24 sm:px-24 lg:max-w-7xl lg:px-8">
+            <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
+                Cryptococcal Meningitis Guidelines
+            </h2>
+            <p className="my-4 text-xl text-gray-500">
+                Diagnosis, Management, and Monitoring
+            </p>
                 <Box
                     sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 400 }}>
                     <Tabs
@@ -89,7 +93,6 @@ function TabPanel(props) {
                         <ARTInitiation />
                     </TabPanel>
                 </Box>
-            </div>
-        </div>
+    </section>
     );
   }
