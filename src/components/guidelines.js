@@ -53,7 +53,7 @@ function TabPanel(props) {
     return (
         <section
         aria-labelledby="collection-heading"
-        className="max-w-xl mx-auto pt-18 px-4 sm:pt-10 sm:px-20 lg:max-w-7xl lg:px-8">
+        className="max-w-xl mx-auto pt-18 px-4 sm:pt-10 sm:px-20 lg:max-w-full lg:px-8">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
                 Cryptococcal Meningitis Guidelines
             </h2>
@@ -61,7 +61,9 @@ function TabPanel(props) {
                 Diagnosis, Management, and Monitoring
             </p>
                 <Box
-                    sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 400 }}>
+                    boxShadow={4}
+                    p={0}
+                    sx={{ marginBottom: 4, flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 400 }}>
                     <Tabs
                         orientation="vertical"
                         variant="scrollable"
