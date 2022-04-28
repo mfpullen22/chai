@@ -9,6 +9,8 @@ import Guidelines from "./guidelines";
 import Hero from "./hero";
 import Intro from "./intro";
 import HRbrain from "../ui/hrbrain";
+import Map from "./map";
+import Footer from "./footer";
 
 const navigation = [
   { name: 'Guidelines', href: '#guidelines' },
@@ -137,8 +139,10 @@ function Home() {
         {/* More main page content here... */}
         <Intro />
         <HRbrain />
-        <Guidelines id="guidelines" />
+        <Map />
         <HRbrain />
+        <Guidelines id="guidelines" />
+        <Footer />
       </main>
     </div>
   )

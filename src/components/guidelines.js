@@ -8,6 +8,7 @@ import Screening from "./GuidelineText/screening";
 import Diagnosis from "./GuidelineText/diagnosis";
 import Treatment from "./GuidelineText/treatment";
 import Monitoring from "./GuidelineText/monitoring";
+import Map from "./map";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -51,7 +52,7 @@ function TabPanel(props) {
   
     return (
         <section
-        aria-labelledby="collection-heading"
+        aria-labelledby="section-heading"
         className="max-w-full mx-auto pt-18 px-4 sm:pt-10 sm:px-20 lg:max-w-7xl lg:px-8">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
                 Cryptococcal Meningitis Guidelines
