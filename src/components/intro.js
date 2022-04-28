@@ -1,9 +1,8 @@
 import React from "react";
 import Cryptococcus from "../images/cryptococcus.jpg";
-import { CameraIcon } from '@heroicons/react/solid'
 
 const stats = [
-    { label: "Gloval Cases, Annually", value: '220,000+' },
+    { label: "Global Cases, Annually", value: '220,000+' },
     { label: 'Global Deaths, Annually', value: '181,000+' },
     { label: 'Percent of HIV-related Deaths in Africa', value: '15-20%' },
     { label: '1-year Mortality in Resource-Limited Settings', value: '70%' },
@@ -39,21 +38,17 @@ function Intro(){
             <div className="mt-8 lg:mt-0">
               <div className="text-base max-w-prose mx-auto lg:max-w-none">
                 <p className="text-lg text-gray-500">
-                  Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique
-                  pellentesque. Blandit amet, sed aenean erat arcu morbi.
+                  Cryptococcal meningitis is the most common cause of adult meninigitis in high prevalence of HIV populations 
+                  and causes 15-20% of HIV-related deaths globally, with the highest incidence occuring in sub-Saharan Africa.
+                  Despite this significant disease burden, it remains a neglected disease.
                 </p>
               </div>
               <div className="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
                 <p>
-                  Sollicitudin tristique eros erat odio sed vitae, consequat turpis elementum. Lorem nibh vel, eget
-                  pretium arcu vitae. Eros eu viverra donec ut volutpat donec laoreet quam urna.
-                </p>
-                <p>
-                  Bibendum eu nulla feugiat justo, elit adipiscing. Ut tristique sit nisi lorem pulvinar. Urna, laoreet
-                  fusce nibh leo. Dictum et et et sit. Faucibus sed non gravida lectus dignissim imperdiet a.
-                </p>
-                <p>
-                  Dictum magnis risus phasellus vitae quam morbi. Quis lorem lorem arcu, metus, egestas netus cursus. In.
+                  This repository is a central source of epidemiologic data, as well as guidelines for diagnosis and management, 
+                  related to Cryptococcal meningitis. By sharing this data in an open-source, easily-accessible manner, we hope to
+                  improve outcomes in areas with a high incidence of Cryptococcal meningitis, as well as serving as a high yield resource
+                  for clinicians managing these patients in any setting.
                 </p>
               </div>
             <div className="mt-10">

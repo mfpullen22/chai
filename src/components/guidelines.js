@@ -8,7 +8,6 @@ import Screening from "./GuidelineText/screening";
 import Diagnosis from "./GuidelineText/diagnosis";
 import Treatment from "./GuidelineText/treatment";
 import Monitoring from "./GuidelineText/monitoring";
-import ARTInitiation from "./GuidelineText/artInitiation";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -53,31 +52,31 @@ function TabPanel(props) {
     return (
         <section
         aria-labelledby="collection-heading"
-        className="max-w-xl mx-auto pt-18 px-4 sm:pt-10 sm:px-20 lg:max-w-full lg:px-8">
+        className="max-w-full mx-auto pt-18 px-4 sm:pt-10 sm:px-20 lg:max-w-7xl lg:px-8">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
                 Cryptococcal Meningitis Guidelines
             </h2>
-            <p className="mt-0 mb-8 text-xl text-gray-500">
+            <p className="mt-0 text-xl text-gray-500">
                 Diagnosis, Management, and Monitoring
+            </p>
+            <p className="mb-8 text-base text-gray-500">
+                (Last <a className="underline text-blue-600 hover:text-blue-800" href="https://www.who.int/publications/i/item/9789241550277">WHO Cryptococcus Guidelines</a> Update: 1 March 2018)
             </p>
                 <Box
                     boxShadow={4}
                     p={0}
-                    sx={{ marginBottom: 4, flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 400 }}>
+                    sx={{ marginBottom: 4,  bgcolor: 'background.paper', height: "100%" }}>
                     <Tabs
-                        orientation="vertical"
                         variant="scrollable"
+                        scrollButtons="auto"
+                        allowScrollButtonsMobile
                         value={value}
                         onChange={handleChange}
-                        aria-label="Vertical tabs"
-                        textColor="primary"
-                        indicatorColor="primary"
-                        sx={{ borderRight: 1, borderColor: 'divider'}}>
+                        aria-label="scrollable auto tabs">
                         <Tab label="Screening and Prevention" {...a11yProps(0)} />
                         <Tab label="Diagnosis" {...a11yProps(1)} />
                         <Tab label="Treatment" {...a11yProps(2)} />
                         <Tab label="Monitoring" {...a11yProps(3)} />
-                        <Tab label="ART Initiation" {...a11yProps(4)} />
                     </Tabs>
                     <TabPanel value={value} index={0}>
                         <Screening />
@@ -90,9 +89,6 @@ function TabPanel(props) {
                     </TabPanel>
                     <TabPanel value={value} index={3}>
                         <Monitoring />
-                    </TabPanel>
-                    <TabPanel value={value} index={4}>
-                        <ARTInitiation />
                     </TabPanel>
                 </Box>
     </section>
