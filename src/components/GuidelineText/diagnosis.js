@@ -27,6 +27,7 @@ function Diagnosis(){
                 referred to center where further investigation and treatment is possible, as appropriate.
             </p>
         </div>
+//TODO: Add information about diagnosis of relapse from WHO guideline doc
 
     )
 }

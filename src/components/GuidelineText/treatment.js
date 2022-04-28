@@ -76,7 +76,7 @@ function Treatment(){
                 </div>
             </div>
         </div>
-
+//TODO: Add treatment of relapse info from WHO guidelines
     )
 }
 

@@ -35,7 +35,16 @@ function Monitoring(){
                 Monitoring Treatment Response:
             </h2>
             <div className="ml-8 text-base text-left tracking-tight text-gray-900">
-                
+                <ul className="list-disc">
+                    <li>
+                        Clinical response (fever, headache, signs or symptoms of raised intracranial pressure) should be assessed daily
+                        during the initial two weeks of induction therapy.
+                    </li>
+                    <li>
+                        In persons showing evidence of a sustained clinical response to therapy, it is not advised to perform follow-up lumbar
+                        puncture after induction phase to assess antifungal response, or to repeat serum or plasma CrAg.
+                    </li>
+                </ul>
             </div>
         </div>
     )
