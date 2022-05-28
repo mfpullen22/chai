@@ -8,7 +8,6 @@ import Screening from "./GuidelineText/screening";
 import Diagnosis from "./GuidelineText/diagnosis";
 import Treatment from "./GuidelineText/treatment";
 import Monitoring from "./GuidelineText/monitoring";
-import Map from "./map";
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -23,7 +22,7 @@ function TabPanel(props) {
       >
         {value === index && (
           <Box sx={{ p: 3 }}>
-            <Typography>{children}</Typography>
+            <Typography component={'span'} variant={'body2'}>{children}</Typography>
           </Box>
         )}
       </div>
