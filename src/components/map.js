@@ -16,7 +16,7 @@ function Map() {
         const { ADMIN, total_crag_pos_with_cm_string } = e.target.feature.properties;
         setOnselect({
             country:ADMIN,
-            crypto:parseInt(total_crag_pos_with_cm_string),
+            crypto:total_crag_pos_with_cm_string,
         });
 
 
