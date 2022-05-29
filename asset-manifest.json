@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/chai/static/css/main.8f1dfa2d.css",
-    "main.js": "/chai/static/js/main.c74218d4.js",
+    "main.css": "/chai/static/css/main.cdcf3011.css",
+    "main.js": "/chai/static/js/main.341535df.js",
     "static/js/787.e63ba7cc.chunk.js": "/chai/static/js/787.e63ba7cc.chunk.js",
     "static/media/cryptococcus.jpg": "/chai/static/media/cryptococcus.8507df6af6bc28623cd1.jpg",
     "static/media/brain.jpg": "/chai/static/media/brain.c9bd408c4f0f2e2f3b52.jpg",
     "index.html": "/chai/index.html",
-    "main.8f1dfa2d.css.map": "/chai/static/css/main.8f1dfa2d.css.map",
-    "main.c74218d4.js.map": "/chai/static/js/main.c74218d4.js.map",
+    "main.cdcf3011.css.map": "/chai/static/css/main.cdcf3011.css.map",
+    "main.341535df.js.map": "/chai/static/js/main.341535df.js.map",
     "787.e63ba7cc.chunk.js.map": "/chai/static/js/787.e63ba7cc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8f1dfa2d.css",
-    "static/js/main.c74218d4.js"
+    "static/css/main.cdcf3011.css",
+    "static/js/main.341535df.js"
   ]
 }
