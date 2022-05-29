@@ -7,7 +7,6 @@ import {
 import features from "../data/countries.json";
 import Legend from "./legend";
 
-
 function Map() {
     const [onselect, setOnselect] = useState({});
     /* function determining what should happen onmouseover, this function updates our state*/
@@ -110,18 +109,39 @@ function Map() {
                     )}
                     <Legend />
                 </MapContainer>
-                {!onselect.country && (
-                <div className="census-info-hover">
-                    <strong>Cryptococcus Statistics by Country</strong>
-                    <p>Hover on each county for more details</p>
+                {!onselect.country ? (
+                    <div className="bg-white overflow-hidden drop-shadow-xl rounded-lg divide-y divide-gray-200 mx-auto w-fit">
+                        <div className="px-4 py-5 sm:px-6">
+                            <strong>Cryptococcus Statistics by Country</strong>
+                            {/* Content goes here */}
+                            {/* We use less vertical padding on card headers on desktop than on body sections */}
+                        </div>
+                        <div className="px-4 py-5 sm:p-6">Select a country above{/* Content goes here */}</div>
+                        <div className="px-4 py-4 sm:px-6">
+                            Data current as of December 2020
+                        {/* Content goes here */}
+                        {/* We use less vertical padding on card footers at all sizes than on headers or body sections */}
+                        </div>
+                    </div>
+                )
+                 : (
+                    <div className="bg-white overflow-hidden drop-shadow-xl rounded-lg divide-y divide-gray-200 mx-auto w-fit">
+                    <div className="px-4 py-5 sm:px-6">
+                        <strong>Cryptococcus Statistics by Country</strong>
+                        {/* Content goes here */}
+                        {/* We use less vertical padding on card headers on desktop than on body sections */}
+                    </div>
+                    <div className="px-4 py-5 sm:p-6">
+                        <ul>
+                            <li><strong>{onselect.country}</strong></li>
+                            <li>Total Crypto Crag+: {onselect.crypto ? onselect.crypto : "No data"}</li>
+                        </ul>{/* Content goes here */}</div>
+                    <div className="px-4 py-4 sm:px-6">
+                        Data current as of December 2020
+                    {/* Content goes here */}
+                    {/* We use less vertical padding on card footers at all sizes than on headers or body sections */}
+                    </div>
                 </div>
-                )}
-                {onselect.country && (
-                    <ul className="census-info">
-                        <li><strong>Cryptococcus Statistics by Country</strong></li>
-                        <li><strong>{onselect.country}</strong></li><br/>
-                        <li>Total Crypto: {onselect.crypto ? onselect.crypto : "No data"}</li>
-                    </ul>
                 )}
                 </div>
             </div>
