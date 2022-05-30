@@ -12,10 +12,34 @@ function Map() {
     /* function determining what should happen onmouseover, this function updates our state*/
     const highlightFeature = (e=> {
         //var layer = e.target;
-        const { ADMIN, total_crag_pos_with_cm_string } = e.target.feature.properties;
+        const { 
+            ADMIN, 
+            total_crag_pos_with_cm_string, 
+            adults_w_hiv, 
+            crag_pos_deaths, 
+            num_know_status, 
+            percent_know_status,
+            on_art, 
+            cd4_under_200,
+            percent_hiv_cd4_under_200,
+            crag_prevalence_cd4_under_200, 
+            num_crag_pos, 
+            num_crag_pos_not_on_art, } = e.target.feature.properties;
         setOnselect({
             country:ADMIN,
             crypto:total_crag_pos_with_cm_string,
+            hiv: adults_w_hiv,
+            deaths: crag_pos_deaths,
+            numKnow: num_know_status,
+            percentKnow: percent_know_status,
+            onART: on_art,
+            percentART: Math.ceil(parseInt((on_art.replace(/,/g,""))/parseInt(adults_w_hiv.replace(/,/g,""))*100)).toString(),
+            CD4: cd4_under_200,
+            percentCD4: percent_hiv_cd4_under_200,
+            cragPrev: crag_prevalence_cd4_under_200,
+            cragPos: num_crag_pos,
+            cragPosART: num_crag_pos_not_on_art,
+            percentCragPosART: (100 - Math.ceil(parseInt((num_crag_pos_not_on_art.replace(/,/g,""))/parseInt(num_crag_pos.replace(/,/g,""))*100))).toString(),
         });
 
 
@@ -31,6 +55,8 @@ function Map() {
         layer.on({
             mouseover: highlightFeature,
             mouseleave: resetHighlight,
+            click: highlightFeature,
+            mousedown: highlightFeature,
         });
         layer.bindTooltip(`<div><b>Country:</b> ${feature.properties.ADMIN}<p><b>Cryptococcal Meningitis Cases (2020):</b> ${feature.properties.total_crag_pos_with_cm_string ? feature.properties.total_crag_pos_with_cm_string : "No data"}</p></div>`, 
             {
@@ -69,7 +95,7 @@ function Map() {
         });
     });
     const mapStyle = {
-        height: '55vh',
+        height: '65vh',
         width: '85%',
         margin: '0 auto',
     }
@@ -87,9 +113,10 @@ function Map() {
             <p className="mt-0 text-xl text-gray-500">
                 Global Map of Cryptococcal Meningitis Epidemiologic Data
             </p>
-            <div className="">
-                <div className="">
-
+            <p className="mt-0 text-l text-gray-500">
+                CrAg-positive Cryptococcal Meningitis Cases (2020)
+            </p>
+                <div className="h-full">
                 <MapContainer 
                     zoom={2}
                     maxZoom={6}
@@ -109,6 +136,7 @@ function Map() {
                     )}
                     <Legend />
                 </MapContainer>
+                </div>
                 {!onselect.country ? (
                     <div className="bg-white overflow-hidden drop-shadow-xl rounded-lg divide-y divide-gray-200 mx-auto w-fit">
                         <div className="px-4 py-5 sm:px-6">
@@ -127,14 +155,22 @@ function Map() {
                  : (
                     <div className="bg-white overflow-hidden drop-shadow-xl rounded-lg divide-y divide-gray-200 mx-auto w-fit">
                     <div className="px-4 py-5 sm:px-6">
-                        <strong>Cryptococcus Statistics by Country</strong>
+                        <strong>Cryptococcal Meningitis (CM) Statistics by Country</strong>
                         {/* Content goes here */}
                         {/* We use less vertical padding on card headers on desktop than on body sections */}
                     </div>
                     <div className="px-4 py-5 sm:p-6">
                         <ul>
                             <li><strong>{onselect.country}</strong></li>
-                            <li>Total Crypto Crag+: {onselect.crypto ? onselect.crypto : "No data"}</li>
+                            <li className="text-left px-8"><u>CrAg+, Total</u>: {onselect.cragPos ? onselect.cragPos : "No data"}</li>
+                            <li className="text-left px-8"><u>CrAg+, on ART</u>: {onselect.cragPosART ? `${onselect.cragPosART} (${onselect.percentCragPosART}%)` : "No data"}</li>
+                            <li className="text-left px-8"><u>CrAg+ with CM</u>: {onselect.crypto ? onselect.crypto : "No data"}</li>
+                            <li className="text-left px-8"><u>CrAg+ Deaths</u>: {onselect.deaths ? onselect.deaths: "No data"}</li>
+                            <li className="text-left px-8"><u>HIV+ Adults</u>: {onselect.hiv ? onselect.hiv : "No data"}</li>
+                            <li className="text-left px-8"><u>HIV+, Know Status</u>: {onselect.numKnow ? `${onselect.numKnow} (${onselect.percentKnow})` : "No data"}</li>
+                            <li className="text-left px-8"><u>HIV+, on ART</u>: {onselect.onART ? `${onselect.onART} (${onselect.percentART}%)` : "No data"}</li>
+                            <li className="text-left px-8"><u>HIV+, CD4 &lt; 200</u>: {onselect.CD4 ? `${onselect.CD4} (${onselect.percentCD4})` : "No data"}</li>
+                            <li className="text-left px-8"><u>CrAg+, CD4 &lt; 200</u>: {onselect.cragPrev ? onselect.cragPrev : "No data"}</li>
                         </ul>{/* Content goes here */}</div>
                     <div className="px-4 py-4 sm:px-6">
                         Data current as of December 2020
@@ -143,8 +179,7 @@ function Map() {
                     </div>
                 </div>
                 )}
-                </div>
-            </div>
+                <br />
 
         </section>
 

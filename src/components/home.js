@@ -1,10 +1,10 @@
-import { Fragment } from 'react';
+/* import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
 import {
   MenuIcon,
   XIcon,
 } from '@heroicons/react/outline';
-import BrainIcon from "../images/brain_icon.png";
+import BrainIcon from "../images/brain_icon.png"; */
 import Guidelines from "./guidelines";
 import Hero from "./hero";
 import Intro from "./intro";
@@ -12,7 +12,7 @@ import HRbrain from "../ui/hrbrain";
 import Map from "./map";
 import Footer from "./footer";
 
-const navigation = [
+/* const navigation = [
   { name: 'Guidelines', href: '#guidelines' },
   { name: 'CryptoMap', href: '#' },
   { name: 'About', href: '#' },
@@ -20,12 +20,12 @@ const navigation = [
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
-}
+} */
 
 function Home() {
   return (
     <div className="bg-white">
-      <header>
+{/*       <header>
         <Popover className="relative bg-white">
           <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
             <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -133,7 +133,7 @@ function Home() {
           </Transition>
         </Popover>
       </header>
-
+ */}
       <main>
         <Hero />            
         {/* More main page content here... */}
