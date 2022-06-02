@@ -33,13 +33,13 @@ function Map() {
             numKnow: num_know_status,
             percentKnow: percent_know_status,
             onART: on_art,
-            percentART: Math.ceil(parseInt((on_art.replace(/,/g,""))/parseInt(adults_w_hiv.replace(/,/g,""))*100)).toString(),
+            //percentART: Math.ceil(parseInt((on_art.replace(/,/g,""))/parseInt(adults_w_hiv.replace(/,/g,""))*100)).toString(),
             CD4: cd4_under_200,
             percentCD4: percent_hiv_cd4_under_200,
             cragPrev: crag_prevalence_cd4_under_200,
             cragPos: num_crag_pos,
             cragPosART: num_crag_pos_not_on_art,
-            percentCragPosART: (100 - Math.ceil(parseInt((num_crag_pos_not_on_art.replace(/,/g,""))/parseInt(num_crag_pos.replace(/,/g,""))*100))).toString(),
+            //percentCragPosART: (100 - Math.ceil(parseInt((num_crag_pos_not_on_art.replace(/,/g,""))/parseInt(num_crag_pos.replace(/,/g,""))*100))).toString(),
         });
 
 
@@ -163,14 +163,18 @@ function Map() {
                         <ul>
                             <li><strong>{onselect.country}</strong></li>
                             <li className="text-left px-8"><u>CrAg+, Total</u>: {onselect.cragPos ? onselect.cragPos : "No data"}</li>
-                            <li className="text-left px-8"><u>CrAg+, on ART</u>: {onselect.cragPosART ? `${onselect.cragPosART} (${onselect.percentCragPosART}%)` : "No data"}</li>
+                            <li className="text-left px-8"><u>CrAg+, on ART</u>: {onselect.cragPosART ? `${onselect.cragPosART} (${(100 - Math.ceil(parseInt((onselect.cragPosART.replace(/,/g,""))/parseInt(onselect.cragPos.replace(/,/g,""))*100))).toString()}%)` : "No data"}</li>
                             <li className="text-left px-8"><u>CrAg+ with CM</u>: {onselect.crypto ? onselect.crypto : "No data"}</li>
                             <li className="text-left px-8"><u>CrAg+ Deaths</u>: {onselect.deaths ? onselect.deaths: "No data"}</li>
                             <li className="text-left px-8"><u>HIV+ Adults</u>: {onselect.hiv ? onselect.hiv : "No data"}</li>
                             <li className="text-left px-8"><u>HIV+, Know Status</u>: {onselect.numKnow ? `${onselect.numKnow} (${onselect.percentKnow})` : "No data"}</li>
-                            <li className="text-left px-8"><u>HIV+, on ART</u>: {onselect.onART ? `${onselect.onART} (${onselect.percentART}%)` : "No data"}</li>
+{/*                         <li className="text-left px-8"><u>HIV+, on ART</u>: {onselect.onART ? `${onselect.onART} (${onselect.percentART}%)` : "No data"}</li>
+                            <li className="text-left px-8"><u>HIV+, CD4 &lt; 200</u>: {onselect.CD4 ? `${onselect.CD4} (${onselect.percentCD4})` : "No data"}</li>
+ */}                          
+                            <li className="text-left px-8"><u>HIV+, on ART</u>: {onselect.onART ? `${onselect.onART} (${Math.ceil(parseInt((onselect.onART.replace(/,/g,""))/parseInt(onselect.hiv.replace(/,/g,""))*100)).toString()}%)` : "No data"}</li>
                             <li className="text-left px-8"><u>HIV+, CD4 &lt; 200</u>: {onselect.CD4 ? `${onselect.CD4} (${onselect.percentCD4})` : "No data"}</li>
                             <li className="text-left px-8"><u>CrAg+, CD4 &lt; 200</u>: {onselect.cragPrev ? onselect.cragPrev : "No data"}</li>
+                            
                         </ul>{/* Content goes here */}</div>
                     <div className="px-4 py-4 sm:px-6">
                         Data current as of December 2020
