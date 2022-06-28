@@ -60,9 +60,9 @@ function Map() {
         });
         layer.bindTooltip(`<div><b>Country:</b> ${feature.properties.ADMIN}<p><b>Cryptococcal Meningitis Cases (2020):</b> ${feature.properties.total_crag_pos_with_cm_string ? feature.properties.total_crag_pos_with_cm_string : "No data"}</p></div>`, 
             {
-                direction: "right",
+                direction: "top",
                 sticky: true,
-                offset: [10, 0],
+                offset: [0, 0],
                 opacity: 0.85,
                 className: 'leaflet-tooltip'
             });
