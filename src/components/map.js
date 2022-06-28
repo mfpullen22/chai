@@ -108,14 +108,12 @@ function Map() {
         aria-labelledby="section-map"
         className="max-w-full mx-auto pt-18 px-4 sm:pt-10 sm:px-20 lg:max-w-7xl lg:px-8">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                CryptoMap
+                Global Map of Cryptococcal Meningitis Epidemiologic Data
             </h2>
             <p className="mt-0 text-xl text-gray-500">
-                Global Map of Cryptococcal Meningitis Epidemiologic Data
-            </p>
-            <p className="mt-0 text-l text-gray-500">
                 CrAg-positive Cryptococcal Meningitis Cases (2020)
             </p>
+
                 <div className="h-full">
                 <MapContainer 
                     zoom={2}
@@ -146,7 +144,7 @@ function Map() {
                         </div>
                         <div className="px-4 py-5 sm:p-6">Select a country above{/* Content goes here */}</div>
                         <div className="px-4 py-4 sm:px-6">
-                            Data current as of December 2020
+                            Data source: <a href="https://www.unaids.org/en" className="underline text-blue-600 hover:text-rose-900">UNAIDS</a>
                         {/* Content goes here */}
                         {/* We use less vertical padding on card footers at all sizes than on headers or body sections */}
                         </div>
@@ -176,8 +174,8 @@ function Map() {
                             <li className="text-left px-8"><u>CrAg+, CD4 &lt; 200</u>: {onselect.cragPrev ? onselect.cragPrev : "No data"}</li>
                             
                         </ul>{/* Content goes here */}</div>
-                    <div className="px-4 py-4 sm:px-6">
-                        Data current as of December 2020
+                    <div className="px-4 py-4 sm:px-6 ">
+                        Data source: <a href="https://www.unaids.org/en" className="underline text-blue-600 hover:text-rose-900">UNAIDS</a>
                     {/* Content goes here */}
                     {/* We use less vertical padding on card footers at all sizes than on headers or body sections */}
                     </div>

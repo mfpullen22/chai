@@ -140,8 +140,8 @@ function Home() {
         <br />
         <HRbrain />
         <Map />
-        <Intro />
         <HRbrain />
+        <Intro />
         <HRbrain />
         <Guidelines id="guidelines" />
         <Footer />
