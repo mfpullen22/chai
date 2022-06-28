@@ -116,9 +116,9 @@ function Map() {
 
                 <div className="h-full">
                 <MapContainer 
-                    zoom={2}
+                    zoom={3}
                     maxZoom={6}
-                    minZoom={1}
+                    minZoom={2}
                     maxBoundsViscosity={1.0}
                     scrollWheelZoom={true} 
                     style={mapStyle} 
