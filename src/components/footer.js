@@ -9,13 +9,13 @@ function Footer(){
         <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
         <div className="grid grid-cols-3 gap-8 md:grid-cols-3 lg:grid-cols-3">
           <div className="col-span-1 flex justify-center md:col-span-1 lg:col-span-1">
+            <img className="h-24" src={UNITAID} alt="UNITAID Logo" />
+          </div>
+          <div className="col-span-1 flex justify-center md:col-span-1 lg:col-span-1">
             <img className="h-24" src={CHAI} alt="CHAI Logo" />
           </div>
           <div className="col-span-1 flex justify-center md:col-span-1 lg:col-span-1">
             <img className="h-24" src={UMN} alt="UMN Logo" />
-          </div>
-          <div className="col-span-1 flex justify-center md:col-span-1 lg:col-span-1">
-            <img className="h-24" src={UNITAID} alt="UNITAID Logo" />
           </div>
         </div>
             <p className="mt-8 text-center text-base text-gray-400">

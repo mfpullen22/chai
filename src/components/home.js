@@ -137,9 +137,11 @@ function Home() {
       <main>
         <Hero />            
         {/* More main page content here... */}
-        <Intro />
+        <br />
         <HRbrain />
         <Map />
+        <Intro />
+        <HRbrain />
         <HRbrain />
         <Guidelines id="guidelines" />
         <Footer />

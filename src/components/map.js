@@ -96,7 +96,7 @@ function Map() {
     });
     const mapStyle = {
         height: '65vh',
-        width: '85%',
+        width: '95%',
         margin: '0 auto',
     }
     const feature = features.features.map(feature=>{
