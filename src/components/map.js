@@ -122,7 +122,7 @@ function Map() {
                     maxBoundsViscosity={1.0}
                     scrollWheelZoom={true} 
                     style={mapStyle} 
-                    center={[32.616276686609176, 3.4219812261325426]}>
+                    center={[10.616276686609176, 3.4219812261325426]}>
                     <TileLayer
                         attribution="Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL."
                         url="https://cartocdn_{s}.global.ssl.fastly.net/base-eco/{z}/{x}/{y}.png"
