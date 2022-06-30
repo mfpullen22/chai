@@ -60,7 +60,7 @@ function TabPanel(props) {
                 Diagnosis, Management, and Monitoring
             </p>
             <p className="mb-8 text-base text-gray-500">
-                (Adapted from <a className="underline text-blue-600 hover:text-blue-800" href="https://www.who.int/publications/i/item/9789241550277">2018 WHO Cryptococcal Meningitis Guidelines</a>)
+                (Adapted from <a className="underline text-blue-600 hover:text-blue-800" href="https://www.who.int/publications/i/item/9789240052178">2022 WHO Cryptococcal Meningitis Guidelines</a>)
             </p>
                 <Box
                     boxShadow={4}

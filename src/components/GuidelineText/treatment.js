@@ -10,28 +10,28 @@ function Treatment(){
                 <span className="underline">Preferred:</span> 
                     <ul className="ml-8 list-disc">
                         <li>
-                        One week course of amphotericin B deoxycholate (1 mg/kg/day) <span className="underline">plus</span> flucytosine (100 mg/kg/day, 
-                        divided into four doses per day), <span className="underline font-bold">followed by...</span>
+                            A single high dose (10 mg/kg) of liposomal amphoteriicn B <span className="underline">plus</span> 14 days of flucytosine (100 mg/kg per day divided into four 
+                            doses per day) <span className="underline">plus</span> fluconazole (1200 mg daily for adults, 12 mg/kg per day for children and adolesnces up to a maximum of 
+                            800 mg daily). (<a className="underline text-blue-600 hover:text-blue-800" href="https://www.nejm.org/doi/10.1056/NEJMoa2111904?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed">Ambition Trial</a>). 
                         </li>
-                        <li>
-                        One week of fluconazole (1200mg/day for adults, 12 mg/kg/day 
-                        for children and adolescents, up to a maximum of 800mg daily). Pre-emptive hydration and electrolyte replacement, 
-                        as well as toxicity monitoring and management, should be provided to minimize treatment-related adverse effects.
-                        </li>
-                        <p className="ml-16 mt-2">
-                            <span className="underline">Note:</span> Data from the recently published <a className="underline text-blue-600 hover:text-blue-800" href="https://www.nejm.org/doi/10.1056/NEJMoa2111904?url_ver=Z39.88-2003&rfr_id=ori:rid:crossref.org&rfr_dat=cr_pub%20%200pubmed">Ambition Trial</a> suggests 
-                            induction therapy with a single dose of liposomal amphotericin B (10 mg/kg) in combination with 14 days of flucytosine (100 mg/kg/day) and fluconazole (1200 mg/day) is noninferior to the current WHO-preferred therapy 
-                            given above, and may be associated with fewer amphotericin-related adverse effects.
-                        </p>
                     </ul>
                     <span className="underline">Alternatives:</span>
                     <ul className="ml-8 list-disc"> 
                         <li>
-                            Two weeks of fluconazole (1200 mg daily for adults, 12 mg/kd/day for children and adolescents)
-                            <span className="underline">plus</span> flucytosine (100 mg/kg/day, divided into four doses per day), <span className="underline font-bold">or...</span>
+                            <span className="font-bold">If liposomal amphotericin B unavailable - </span>One week of amphotericin B deoxycholate (1 mg/kg per day) <span className="underline">plus</span> flucytosine 
+                            (100 mg/kg per day, divided into four doses per day) <span className="underline font-bolt">followed by</span> one week of fluconazole 
+                            (1200 mg daily for adults, 12 mg/kg per day for children and adolescents up to a maximum of 800 mg daily).
                         </li>
                         <li>
-                            Two weeks amphotericin deoxycholate (1 mg/kg/day) <span className="underline">plus</span> fluconazole (1200mg daily for adults, 12 mg/kg/day for children and adolescents 
+                            <span className="font-bold">If no amphotericin B formulations available - </span>Two weeks of fluconazole (1200 mg daily for adults, 12 mg/kg per day
+                            for children and adolescents up to a maximum of 800 mg daily) <span className="underline">plus</span> flucytosine (100 mg/kg per day, divided into four doses per day).
+                        </li>
+                        <li>
+                            <span className="font-bold">If flucytosine unavailable - </span>Two weeks of liposomal amphotericin (3-4 mg/kg per day) <span className="underline">plus</span> fluconazole
+                            (1200 mg daily, 12 mg/kg per day for children and adolescents up to a maximum of 800 mg daily). 
+                        </li>
+                        <li>
+                            <span className="font-bold">If liposomal amphotericin B and flucytosine unavailable - </span>Two weeks of amphotericin deoxycholate (1 mg/kg/day) <span className="underline">plus</span> fluconazole (1200mg daily for adults, 12 mg/kg/day for children and adolescents 
                             up to a maximum of 800 mg daily).
                         </li>
                     </ul>
@@ -45,7 +45,7 @@ function Treatment(){
             <div className="ml-8 text-base text-left tracking-tight text-gray-900">
                 <ul className="list-disc">
                     <li>
-                        Fluconazole (800mg daily for adults, 6-12 mg/kg/day for children and adolescents up to a maximum of 800mg daily) for eright weeks following induction therapy.
+                        Fluconazole (800mg daily for adults, 6-12 mg/kg/day for children and adolescents up to a maximum of 800mg daily) for eight weeks following induction therapy.
                     </li>
                 </ul>
             </div>
@@ -55,7 +55,8 @@ function Treatment(){
             <div className="ml-8 text-base text-left tracking-tight text-gray-900">
                 <ul className="list-disc">
                     <li>
-                        Fluconazole (200mg daily for adults, 6 mg/kg/day for children and adolescents up to a maximum of 800mg daily) for following consolidation therapy.
+                        Fluconazole (200mg daily for adults, 6 mg/kg/day for children and adolescents up to a maximum of 800mg daily) following consolidation therapy, continuing until 
+                        immune reconstitution (CD4 {`>`} 200 cells/mm<sup>3</sup>).
                     </li>
                 </ul>
             </div>
