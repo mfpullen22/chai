@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/chai/static/css/main.e93feab5.css",
-    "main.js": "/chai/static/js/main.21334bd1.js",
+    "main.css": "/chai/static/css/main.3b14dfb1.css",
+    "main.js": "/chai/static/js/main.6a887941.js",
     "static/js/787.e63ba7cc.chunk.js": "/chai/static/js/787.e63ba7cc.chunk.js",
     "static/media/cryptococcus.jpg": "/chai/static/media/cryptococcus.8507df6af6bc28623cd1.jpg",
     "static/media/brain.jpg": "/chai/static/media/brain.c9bd408c4f0f2e2f3b52.jpg",
@@ -9,12 +9,12 @@
     "static/media/UNITAID.png": "/chai/static/media/UNITAID.b39177bac8c49c5e8838.png",
     "static/media/UMN.png": "/chai/static/media/UMN.c31c2e9fc5859261ff1b.png",
     "index.html": "/chai/index.html",
-    "main.e93feab5.css.map": "/chai/static/css/main.e93feab5.css.map",
-    "main.21334bd1.js.map": "/chai/static/js/main.21334bd1.js.map",
+    "main.3b14dfb1.css.map": "/chai/static/css/main.3b14dfb1.css.map",
+    "main.6a887941.js.map": "/chai/static/js/main.6a887941.js.map",
     "787.e63ba7cc.chunk.js.map": "/chai/static/js/787.e63ba7cc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e93feab5.css",
-    "static/js/main.21334bd1.js"
+    "static/css/main.3b14dfb1.css",
+    "static/js/main.6a887941.js"
   ]
 }
