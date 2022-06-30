@@ -1,10 +1,11 @@
 import React from "react";
-import Cryptococcus from "../images/cryptococcus.jpg";
+//import Cryptococcus from "../images/cryptococcus.jpg";
+import LFA from "../images/LFA.png";
 
 const stats = [
-    { label: "Global Cases, Annually", value: '220,000+' },
-    { label: 'Global Deaths, Annually', value: '181,000+' },
-    { label: 'Percent of HIV-related Deaths in Africa', value: '15-20%' },
+    { label: "Global CrAg+ Cases, Annually", value: '179,000' },
+    { label: 'Global Cryptococcal-related Deaths', value: '112,000' },
+    { label: 'Global Percent of AIDS-related Deaths', value: '19%' },
     { label: '1-year Mortality in Resource-Limited Settings', value: '70%' },
   ]
 
@@ -26,7 +27,7 @@ function Intro(){
                   <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
                     <img
                       className="rounded-lg shadow-lg object-cover object-center"
-                      src={Cryptococcus}
+                      src={LFA}
                       alt="Cryptococcus-positive blood sample"
                       width={1184}
                       height={1376}

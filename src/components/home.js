@@ -6,7 +6,7 @@ import {
 } from '@heroicons/react/outline';
 import BrainIcon from "../images/brain_icon.png"; */
 import Guidelines from "./guidelines";
-import Hero from "./hero";
+//import Hero from "./hero";
 import Intro from "./intro";
 import HRbrain from "../ui/hrbrain";
 import Map from "./map";
@@ -135,10 +135,6 @@ function Home() {
       </header>
  */}
       <main>
-        <Hero />            
-        {/* More main page content here... */}
-        <br />
-        <HRbrain />
         <Map />
         <HRbrain />
         <Intro />
@@ -149,5 +145,8 @@ function Home() {
     </div>
   )
 }
-
+// Removed above
+// <Hero />            
+// <br />
+// <HRbrain />
 export default Home;

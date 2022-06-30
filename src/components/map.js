@@ -108,11 +108,11 @@ function Map() {
         aria-labelledby="section-map"
         className="max-w-full mx-auto pt-18 px-4 sm:pt-10 sm:px-20 lg:max-w-7xl lg:px-8">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                Global Map of Cryptococcal Meningitis Epidemiologic Data
+                Global Map of HIV-associated Cryptococcal Meningitis Epidemiologic Data: 2020
             </h2>
-            <p className="mt-0 text-xl text-gray-500">
+{/*             <p className="mt-0 text-xl text-gray-500">
                 CrAg-positive Cryptococcal Meningitis Cases (2020)
-            </p>
+            </p> */}
 
                 <div className="h-full">
                 <MapContainer 
@@ -160,22 +160,24 @@ function Map() {
                     <div className="px-4 py-5 sm:p-6">
                         <ul>
                             <li><strong>{onselect.country}</strong></li>
-                            <li className="text-left px-8"><u>CrAg+, Total</u>: {onselect.cragPos ? onselect.cragPos : "No data"}</li>
-                            <li className="text-left px-8"><u>CrAg+, on ART</u>: {onselect.cragPosART ? `${onselect.cragPosART} (${(100 - Math.ceil(parseInt((onselect.cragPosART.replace(/,/g,""))/parseInt(onselect.cragPos.replace(/,/g,""))*100))).toString()}%)` : "No data"}</li>
-                            <li className="text-left px-8"><u>CrAg+ with CM</u>: {onselect.crypto ? onselect.crypto : "No data"}</li>
-                            <li className="text-left px-8"><u>CrAg+ Deaths</u>: {onselect.deaths ? onselect.deaths: "No data"}</li>
-                            <li className="text-left px-8"><u>HIV+ Adults</u>: {onselect.hiv ? onselect.hiv : "No data"}</li>
-                            <li className="text-left px-8"><u>HIV+, Know Status</u>: {onselect.numKnow ? `${onselect.numKnow} (${onselect.percentKnow})` : "No data"}</li>
+                            <li className="text-left px-2"><u>Total Crag+</u>: {onselect.cragPos ? onselect.cragPos : "No data"}</li>
+                            <li className="text-left px-2"><u>CrAg+ on ART</u>: {onselect.cragPosART ? `${onselect.cragPosART} (${(100 - Math.ceil(parseInt((onselect.cragPosART.replace(/,/g,""))/parseInt(onselect.cragPos.replace(/,/g,""))*100))).toString()}%)` : "No data"}</li>
+                            <li className="text-left px-2"><u>Cryptococcal Meningitis</u>: {onselect.crypto ? onselect.crypto : "No data"}</li>
+                            <li className="text-left px-2"><u>Cryptococcal Deaths</u>: {onselect.deaths ? onselect.deaths: "No data"}</li>
+                            <li className="text-left px-2"><u>CrAg+, CD4 &lt; 200</u>: {onselect.cragPrev ? onselect.cragPrev : "No data"}</li>
+                            <br />
+                            <li className="text-left px-2"><u>People living with HIV - Adults (15+)</u>: {onselect.hiv ? onselect.hiv : "No data"}</li>
+                            <li className="text-left px-2"><u>People living with HIV who know their status (%)</u>: {onselect.numKnow ? `${onselect.numKnow} (${onselect.percentKnow})` : "No data"}</li>
 {/*                         <li className="text-left px-8"><u>HIV+, on ART</u>: {onselect.onART ? `${onselect.onART} (${onselect.percentART}%)` : "No data"}</li>
                             <li className="text-left px-8"><u>HIV+, CD4 &lt; 200</u>: {onselect.CD4 ? `${onselect.CD4} (${onselect.percentCD4})` : "No data"}</li>
  */}                          
-                            <li className="text-left px-8"><u>HIV+, on ART</u>: {onselect.onART ? `${onselect.onART} (${Math.ceil(parseInt((onselect.onART.replace(/,/g,""))/parseInt(onselect.hiv.replace(/,/g,""))*100)).toString()}%)` : "No data"}</li>
-                            <li className="text-left px-8"><u>HIV+, CD4 &lt; 200</u>: {onselect.CD4 ? `${onselect.CD4} (${onselect.percentCD4})` : "No data"}</li>
-                            <li className="text-left px-8"><u>CrAg+, CD4 &lt; 200</u>: {onselect.cragPrev ? onselect.cragPrev : "No data"}</li>
+                            <li className="text-left px-2"><u>People living with HIV receiving ART - Adults (15+)</u>: {onselect.onART ? `${onselect.onART} (${Math.ceil(parseInt((onselect.onART.replace(/,/g,""))/parseInt(onselect.hiv.replace(/,/g,""))*100)).toString()}%)` : "No data"}</li>
+                            <li className="text-left px-2"><u>Adults living with HIV with CD4 cell count &lt; 200 cells/mcL</u>: {onselect.CD4 ? `${onselect.CD4} (${onselect.percentCD4})` : "No data"}</li>
+                            {/* <li className="text-left px-8"><u>CrAg+, CD4 &lt; 200</u>: {onselect.cragPrev ? onselect.cragPrev : "No data"}</li> */}
                             
                         </ul>{/* Content goes here */}</div>
                     <div className="px-4 py-4 sm:px-6 ">
-                        Data source: <a href="https://www.unaids.org/en" className="underline text-blue-600 hover:text-rose-900">UNAIDS</a>
+                        Data source: <a href="https://aidsinfo.unaids.org/" className="underline text-blue-600 hover:text-rose-900">UNAIDS</a>
                     {/* Content goes here */}
                     {/* We use less vertical padding on card footers at all sizes than on headers or body sections */}
                     </div>
