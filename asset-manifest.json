@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/chai/static/css/main.fe306e9b.css",
-    "main.js": "/chai/static/js/main.e69486e7.js",
+    "main.css": "/chai/static/css/main.67d497d2.css",
+    "main.js": "/chai/static/js/main.dfaa1e30.js",
     "static/js/787.e63ba7cc.chunk.js": "/chai/static/js/787.e63ba7cc.chunk.js",
     "static/media/LFA.png": "/chai/static/media/LFA.ae83535920b292db051d.png",
     "static/media/CHAI.png": "/chai/static/media/CHAI.02136fb05bae027ba440.png",
     "static/media/UNITAID.png": "/chai/static/media/UNITAID.b39177bac8c49c5e8838.png",
     "static/media/UMN.png": "/chai/static/media/UMN.c31c2e9fc5859261ff1b.png",
     "index.html": "/chai/index.html",
-    "main.fe306e9b.css.map": "/chai/static/css/main.fe306e9b.css.map",
-    "main.e69486e7.js.map": "/chai/static/js/main.e69486e7.js.map",
+    "main.67d497d2.css.map": "/chai/static/css/main.67d497d2.css.map",
+    "main.dfaa1e30.js.map": "/chai/static/js/main.dfaa1e30.js.map",
     "787.e63ba7cc.chunk.js.map": "/chai/static/js/787.e63ba7cc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fe306e9b.css",
-    "static/js/main.e69486e7.js"
+    "static/css/main.67d497d2.css",
+    "static/js/main.dfaa1e30.js"
   ]
 }
