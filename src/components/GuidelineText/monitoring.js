@@ -19,7 +19,7 @@ function Monitoring(){
                             <li className="ml-8">
                                 Therapeutic lumbar puncture to relieve pressure by draining a volume sufficient to reduce CSF
                                 pressure to less than 20 cm H<sub>2</sub>O or halving the baseline pressure (if extremely high). Usually, 
-                                removal of 20-25ml CSF is enough to reduce opening pressuer sufficiently.
+                                removal of 20-25ml CSF is enough to reduce opening pressure sufficiently.
                             </li>
                             <li className="ml-8">
                                 The frequency of repeat therapeutic lumbar punctures should be determined by the persistence or recurrence

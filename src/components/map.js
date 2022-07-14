@@ -24,7 +24,9 @@ function Map() {
             percent_hiv_cd4_under_200,
             crag_prevalence_cd4_under_200, 
             num_crag_pos, 
-            num_crag_pos_not_on_art, } = e.target.feature.properties;
+            num_crag_pos_not_on_art,
+            cost_crag_screening,
+            cost_cm_treatment } = e.target.feature.properties;
         setOnselect({
             country:ADMIN,
             crypto:total_crag_pos_with_cm_string,
@@ -39,6 +41,8 @@ function Map() {
             cragPrev: crag_prevalence_cd4_under_200,
             cragPos: num_crag_pos,
             cragPosART: num_crag_pos_not_on_art,
+            costScreening: cost_crag_screening,
+            costTreatment: cost_cm_treatment
             //percentCragPosART: (100 - Math.ceil(parseInt((num_crag_pos_not_on_art.replace(/,/g,""))/parseInt(num_crag_pos.replace(/,/g,""))*100))).toString(),
         });
 
@@ -53,10 +57,10 @@ function Map() {
      highlightFeature and resetHighlight*/
     const onEachFeature= (feature, layer)=> {
         layer.on({
-            mouseover: highlightFeature,
-            mouseleave: resetHighlight,
+            //mouseover: highlightFeature,
+            //mouseleave: resetHighlight,
             click: highlightFeature,
-            mousedown: highlightFeature,
+            //mousedown: highlightFeature,
         });
         layer.bindTooltip(`<div><b>Country:</b> ${feature.properties.ADMIN}<p><b>Cryptococcal Meningitis Cases (2020):</b> ${feature.properties.total_crag_pos_with_cm_string ? feature.properties.total_crag_pos_with_cm_string : "No data"}</p></div>`, 
             {
@@ -108,8 +112,9 @@ function Map() {
         aria-labelledby="section-map"
         className="max-w-full mx-auto pt-18 px-4 sm:pt-10 sm:px-20 lg:max-w-7xl lg:px-8">
             <h2 className="text-3xl font-extrabold tracking-tight text-gray-900">
-                Global Map of HIV-associated Cryptococcal Meningitis Epidemiologic Data: 2020
+                Global Burden of HIV-associated Cryptococcal Meningitis: 2020
             </h2>
+            <br />
 {/*             <p className="mt-0 text-xl text-gray-500">
                 CrAg-positive Cryptococcal Meningitis Cases (2020)
             </p> */}
@@ -160,10 +165,10 @@ function Map() {
                     <div className="px-4 py-5 sm:p-6">
                         <ul>
                             <li><strong>{onselect.country}</strong></li>
-                            <li className="text-left px-2"><u>Total Crag+</u>: {onselect.cragPos ? onselect.cragPos : "No data"}</li>
-                            <li className="text-left px-2"><u>CrAg+ on ART</u>: {onselect.cragPosART ? `${onselect.cragPosART} (${(100 - Math.ceil(parseInt((onselect.cragPosART.replace(/,/g,""))/parseInt(onselect.cragPos.replace(/,/g,""))*100))).toString()}%)` : "No data"}</li>
-                            <li className="text-left px-2"><u>Cryptococcal Meningitis</u>: {onselect.crypto ? onselect.crypto : "No data"}</li>
-                            <li className="text-left px-2"><u>Cryptococcal Deaths</u>: {onselect.deaths ? onselect.deaths: "No data"}</li>
+                            <li className="text-left px-2"><u>Total Crag+</u>: {onselect.cragPos ? Math.floor((parseInt((onselect.cragPos.replace(/,/g,"")))/10))*10 : "No data"}</li>
+                            <li className="text-left px-2"><u>CrAg+ on ART</u>: {onselect.cragPosART ? `${Math.floor((parseInt((onselect.cragPosART.replace(/,/g,"")))/10))*10} (${(100 - Math.ceil(parseInt((onselect.cragPosART.replace(/,/g,""))/parseInt(onselect.cragPos.replace(/,/g,""))*100))).toString()}%)` : "No data"}</li>
+                            <li className="text-left px-2"><u>Cryptococcal Meningitis</u>: {onselect.crypto ? Math.floor((parseInt((onselect.crypto.replace(/,/g,"")))/10))*10 : "No data"}</li>
+                            <li className="text-left px-2"><u>Cryptococcal Deaths</u>: {onselect.deaths ? Math.floor((parseInt((onselect.deaths.replace(/,/g,"")))/10))*10: "No data"}</li>
                             <li className="text-left px-2"><u>CrAg+, CD4 &lt; 200</u>: {onselect.cragPrev ? onselect.cragPrev : "No data"}</li>
                             <br />
                             <li className="text-left px-2"><u>People living with HIV - Adults (15+)</u>: {onselect.hiv ? onselect.hiv : "No data"}</li>
@@ -174,7 +179,10 @@ function Map() {
                             <li className="text-left px-2"><u>People living with HIV receiving ART - Adults (15+)</u>: {onselect.onART ? `${onselect.onART} (${Math.ceil(parseInt((onselect.onART.replace(/,/g,""))/parseInt(onselect.hiv.replace(/,/g,""))*100)).toString()}%)` : "No data"}</li>
                             <li className="text-left px-2"><u>Adults living with HIV with CD4 cell count &lt; 200 cells/mcL</u>: {onselect.CD4 ? `${onselect.CD4} (${onselect.percentCD4})` : "No data"}</li>
                             {/* <li className="text-left px-8"><u>CrAg+, CD4 &lt; 200</u>: {onselect.cragPrev ? onselect.cragPrev : "No data"}</li> */}
-                            
+                            <br />
+                            <li className="text-left px-2"><u>Cost of CrAg Screening for all with CD4 cell count &lt; 200 cells/mcL</u>: {onselect.costScreening ? `${onselect.costScreening}` : "No data"}</li>
+                            <li className="text-left px-2"><u>Cost of treating cryptococcal meningitis</u>: {onselect.costTreatment ? `${onselect.costTreatment}` : "No data"}</li>
+                            <li className="text-left px-2">Cost data assumes $3.50/test and $500/treatment course in low-income countries</li>
                         </ul>{/* Content goes here */}</div>
                     <div className="px-4 py-4 sm:px-6 ">
                         Data source: <a href="https://aidsinfo.unaids.org/" className="underline text-blue-600 hover:text-rose-900">UNAIDS</a>

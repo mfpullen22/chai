@@ -11,6 +11,8 @@ import Intro from "./intro";
 import HRbrain from "../ui/hrbrain";
 import Map from "./map";
 import Footer from "./footer";
+import Nav from "./nav";
+import CryptoTable from "./cryptotable";
 
 /* const navigation = [
   { name: 'Guidelines', href: '#guidelines' },
@@ -135,7 +137,9 @@ function Home() {
       </header>
  */}
       <main>
+        <Nav />
         <Map />
+        <CryptoTable />
         <HRbrain />
         <Intro />
         <HRbrain />
