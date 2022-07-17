@@ -49,10 +49,10 @@ function Map() {
 
     });
     /*resets our state i.e no properties should be displayed when a feature is not clicked or hovered over */
-    const resetHighlight= (e =>{
+    /*const resetHighlight= (e =>{
         setOnselect({});
         e.target.setStyle(style(e.target.feature));
-    })
+    })*/
     /* this function is called when a feature in the map is hovered over or when a mouse moves out of it, the function calls two functions
      highlightFeature and resetHighlight*/
     const onEachFeature= (feature, layer)=> {
@@ -180,12 +180,15 @@ function Map() {
                             <li className="text-left px-2"><u>Adults living with HIV with CD4 cell count &lt; 200 cells/mcL</u>: {onselect.CD4 ? `${onselect.CD4} (${onselect.percentCD4})` : "No data"}</li>
                             {/* <li className="text-left px-8"><u>CrAg+, CD4 &lt; 200</u>: {onselect.cragPrev ? onselect.cragPrev : "No data"}</li> */}
                             <br />
-                            <li className="text-left px-2"><u>Cost of CrAg Screening for all with CD4 cell count &lt; 200 cells/mcL</u>: {onselect.costScreening ? `${onselect.costScreening}` : "No data"}</li>
+                            <li className="text-left px-2"><u>Cost of CrAg screening for all with CD4 cell count &lt; 200 cells/mcL</u>: {onselect.costScreening ? `${onselect.costScreening}` : "No data"}</li>
                             <li className="text-left px-2"><u>Cost of treating cryptococcal meningitis</u>: {onselect.costTreatment ? `${onselect.costTreatment}` : "No data"}</li>
-                            <li className="text-left px-2">Cost data assumes $3.50/test and $500/treatment course in low-income countries</li>
                         </ul>{/* Content goes here */}</div>
                     <div className="px-4 py-4 sm:px-6 ">
-                        Data source: <a href="https://aidsinfo.unaids.org/" className="underline text-blue-600 hover:text-rose-900">UNAIDS</a>
+                        <ul>
+                            <li className="text-left px-2 text-sm">HIV data source: <a href="https://aidsinfo.unaids.org/" className="underline text-blue-600 hover:text-rose-900">UNAIDS</a></li>
+                            <li className="text-left px-2 text-sm">Screening cost data assumes $3.50/test in LMIC</li>
+                            <li className="text-left px-2 text-sm">Treatment cost data source: <a href="https://www.croiconference.org/abstract/cost-effectiveness-of-the-ambition-regimen-for-hiv-associated-cryptococcal-meningitis/" className="underline text-blue-600 hover:text-rose-900">AMBITION Regimen Cost Effectiveness</a></li>
+                        </ul>
                     {/* Content goes here */}
                     {/* We use less vertical padding on card footers at all sizes than on headers or body sections */}
                     </div>

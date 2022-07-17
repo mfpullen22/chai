@@ -14,7 +14,11 @@ function CryptoTable() {
                         <th scope="col" className="py-3 px-6">% of AIDS Deaths</th>
                         <th scope="col" className="py-3 px-6">
                             <p>Cost of CrAg Screening</p>
-                            <p>all with CD4{'<'}200</p>
+                            <p>all with advanced HIV disease</p>
+                        </th>
+                        <th scope="col" className="py-3 px-6">
+                            <p>Cost of treating</p>
+                            <p>meningitis</p>
                         </th>
                     </tr>
                 </thead>
@@ -42,6 +46,9 @@ function CryptoTable() {
                         <td className="py-4 px-6 text-center">
                             $21,700,390
                         </td>
+                        <td className="py-4 px-6 text-center">
+                            --
+                        </td>
                     </tr>
                     <tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
                         <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
@@ -65,6 +72,9 @@ function CryptoTable() {
                         </td>
                         <td className="py-4 px-6 text-center">
                             $7,093,380
+                        </td>
+                        <td className="py-4 px-6 text-center">
+                            $66,497,638
                         </td>
                     </tr>
                     <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
@@ -90,6 +100,9 @@ function CryptoTable() {
                         <td className="py-4 px-6 text-center">
                             $1,762,761
                         </td>
+                        <td className="py-4 px-6 text-center">
+                            $19,775,598
+                        </td>
                     </tr>
                     <tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
                         <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
@@ -113,6 +126,9 @@ function CryptoTable() {
                         </td>
                         <td className="py-4 px-6 text-center">
                             $5,541,600
+                        </td>
+                        <td className="py-4 px-6 text-center">
+                            --
                         </td>
                     </tr>
                     <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
@@ -139,6 +155,9 @@ function CryptoTable() {
                         <td className="py-4 px-6 text-center">
                             $1,303,900
                         </td>
+                        <td className="py-4 px-6 text-center">
+                            --
+                        </td>
                     </tr>
                     <tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
                         <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
@@ -162,6 +181,9 @@ function CryptoTable() {
                         </td>
                         <td className="py-4 px-6 text-center">
                             $1,282,925
+                        </td>
+                        <td className="py-4 px-6 text-center">
+                            --
                         </td>
                     </tr>
                     <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
@@ -188,6 +210,9 @@ function CryptoTable() {
                         <td className="py-4 px-6 text-center">
                             $1,076,920
                         </td>
+                        <td className="py-4 px-6 text-center">
+                            $4,874,903
+                        </td>
                     </tr>
                     <tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
                         <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
@@ -212,6 +237,9 @@ function CryptoTable() {
                         <td className="py-4 px-6 text-center">
                             $184,443
                         </td>
+                        <td className="py-4 px-6 text-center">
+                            --
+                        </td>
                     </tr>
                     <tr className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
                         <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
@@ -235,6 +263,9 @@ function CryptoTable() {
                         </td>
                         <td className="py-4 px-6 text-center">
                             $197,432
+                        </td>
+                        <td className="py-4 px-6 text-center">
+                            --
                         </td>
                     </tr>
                 </tbody>
