@@ -14,7 +14,7 @@ function Map() {
         //var layer = e.target;
         const { 
             ADMIN, 
-            total_crag_pos_with_cm_string, 
+            total_crag_pos_with_cm, 
             adults_w_hiv, 
             total_crag_pos_cm_deaths, 
             num_know_status, 
@@ -29,9 +29,9 @@ function Map() {
             cost_cm_treatment } = e.target.feature.properties;
         setOnselect({
             country:ADMIN,
-            crypto:total_crag_pos_with_cm_string,
+            crypto: total_crag_pos_with_cm,
             hiv: adults_w_hiv,
-            deaths: total_crag_pos_cm_deaths,
+            deaths: parseInt(total_crag_pos_cm_deaths.replace(/,/g,"")),
             numKnow: num_know_status,
             percentKnow: percent_know_status,
             onART: on_art,
@@ -39,8 +39,8 @@ function Map() {
             CD4: cd4_under_200,
             percentCD4: percent_hiv_cd4_under_200,
             cragPrev: crag_prevalence_cd4_under_200,
-            cragPos: num_crag_pos,
-            cragPosART: num_crag_pos_not_on_art,
+            cragPos: parseInt(num_crag_pos.replace(/,/g,"")),
+            cragPosART: parseInt(num_crag_pos_not_on_art.replace(/,/g,"")),
             costScreening: cost_crag_screening,
             costTreatment: cost_cm_treatment
             //percentCragPosART: (100 - Math.ceil(parseInt((num_crag_pos_not_on_art.replace(/,/g,""))/parseInt(num_crag_pos.replace(/,/g,""))*100))).toString(),
@@ -166,10 +166,10 @@ function Map() {
                     <div className="px-4 py-5 sm:p-6">
                         <ul>
                             <li><strong>{onselect.country}</strong></li>
-                            <li className="text-left px-2"><u>Total Crag+</u>: {onselect.cragPos ? (onselect.cragPos > 10 ? Math.floor((parseInt((onselect.cragPos.replace(/,/g,"")))/10))*10 : onselect.cragPos) : "No data"}</li>
-                            <li className="text-left px-2"><u>CrAg+ on ART</u>: {onselect.cragPosART ? `${onselect.cragPosART > 10 ? Math.floor((parseInt((onselect.cragPosART.replace(/,/g,"")))/10))*10 : onselect.cragPosART} (${(100 - Math.ceil(parseInt((onselect.cragPosART.replace(/,/g,""))/parseInt(onselect.cragPos.replace(/,/g,""))*100))).toString()}%)` : "No data"}</li>
-                            <li className="text-left px-2"><u>Cryptococcal Meningitis</u>: {onselect.crypto ? (onselect.crypto > 10 ? Math.floor((parseInt((onselect.crypto.replace(/,/g,"")))/10))*10 : onselect.crypto) : "No data"}</li>
-                            <li className="text-left px-2"><u>Cryptococcal Deaths</u>: {onselect.deaths ? (onselect.deaths > 10 ? Math.floor((parseInt((onselect.deaths.replace(/,/g,"")))/10))*10 : onselect.deaths) : "No data"}</li>
+                            <li className="text-left px-2"><u>Total Crag+</u>: {onselect.cragPos ? (onselect.cragPos > 10 ? Math.floor(((onselect.cragPos)/10))*10 : onselect.cragPos) : "No data"}</li>
+                            <li className="text-left px-2"><u>CrAg+ on ART</u>: {onselect.cragPosART ? `${onselect.cragPosART > 10 ? Math.floor(((onselect.cragPosART)/10))*10 : onselect.cragPosART} (${(100 - Math.ceil((onselect.cragPosART/onselect.cragPos*100))).toString()}%)` : "No data"}</li>
+                            <li className="text-left px-2"><u>Cryptococcal Meningitis</u>: {onselect.crypto ? (onselect.crypto > 10 ? Math.floor(((onselect.crypto)/10))*10 : onselect.crypto) : "No data"}</li>
+                            <li className="text-left px-2"><u>Cryptococcal Deaths</u>: {onselect.deaths ? (onselect.deaths > 10 ? Math.floor(((onselect.deaths)/10))*10 : onselect.deaths) : "No data"}</li>
                             <li className="text-left px-2"><u>CrAg+, CD4 &lt; 200</u>: {onselect.cragPrev ? onselect.cragPrev : "No data"}</li>
                             <br />
                             <li className="text-left px-2"><u>People living with HIV - Adults (15+)</u>: {onselect.hiv ? onselect.hiv : "No data"}</li>
