@@ -3,9 +3,14 @@ import './cryptotable.css';
 
 function CryptoTable() {
     return (
-        <div className="overflow-x-auto relative sm:rounded-lg flex flex-col justify-center items-center py-8">
-            <table className="w-2/3 text-sm text-gray-500 dark:text-gray-400 table-auto">
+        <div className="overflow-visible overflow-scroll relative justify-center items-center py-8">
+            <table className="overflow-scroll w-2/3 text-sm text-gray-500 dark:text-gray-400 table-auto">
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 text-center">
+                    <tr>
+                        <th scope="col" className="py-3 px-6 text-xl" colspan="7">
+                        Regional Estimates of Burden of Cryptococcosis
+                        </th>
+                    </tr>
                     <tr>
                         <th scope="col" className="py-3 px-6">Region</th>
                         <th scope="col" className="py-3 px-6">CrAg-Positive</th>

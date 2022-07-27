@@ -9,9 +9,9 @@ function Monitoring(){
             <div className="ml-8 text-base text-left tracking-tight text-gray-900">
                 <ul className="list-disc">
                     <li>
-                        Persons living wit HIV with suspected cryptococcal meningitis should have an initial lumbar puncture
-                        and an early repeat lumbar puncture with measurement of CSF opening perssure to assess for raised intracranial 
-                        pressure, regardless of whether signs or symptoms of raised intracranial perssure are present.
+                        Persons living with HIV with suspected cryptococcal meningitis should have an initial lumbar puncture
+                        and an early repeat lumbar puncture with measurement of CSF opening pressure to assess for raised intracranial 
+                        pressure, regardless of whether signs or symptoms of raised intracranial pressure are present.
                     </li>
                     <li>
                         <span className="underline">Management:</span>

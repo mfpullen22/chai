@@ -1,7 +1,7 @@
 {
   "name": "cm_chai_v2",
   "version": "0.1.0",
-  "homepage": "https://mfpullen22.github.io/chai",
+  "homepage": "https://burdenofcrypto.com",
   "private": false,
   "dependencies": {
     "@emotion/react": "^11.9.0",
