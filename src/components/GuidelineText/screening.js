@@ -5,7 +5,7 @@ function Screening(){
         <div>
             <p className="text-base text-left tracking-tight text-gray-900">
                 Screening for cryptococcal antigen (CrAg) followed by pre-emptive antifungal therapy among those with positive CrAg is 
-                recommended before initiating (or re-inititing) anti-retroviral therapy (ART) for adults and adolescents living with HIV
+                recommended before initiating (or re-iniatiting) anti-retroviral therapy (ART) for adults and adolescents living with HIV
                 who have a CD4 {`<`} 100 cells/mm<sup>3</sup> and may be considered at a higher threshold of CD4 {`<`} 200 cells/mm<sup>3</sup>.
             </p>
             <p className="ml-8 mt-4 text-base text-left tracking-tight text-gray-900">
