@@ -3,8 +3,11 @@ import './cryptotable.css';
 
 function CryptoTable() {
     return (
-        <div className="overflow-visible overflow-scroll relative justify-center items-center py-8">
-            <table className="overflow-scroll w-2/3 text-sm text-gray-500 dark:text-gray-400 table-auto">
+        <div className="overflow-scroll mt-8 flex flex-col">
+            <div className="-my-2 -mx-4 sm:-mx-6 lg:-mx-8">
+                 <div className="inline-block min-w-2/3 py-2 align-middle">
+                    <div className="shadow-sm ring-1 ring-black ring-opacity-5">
+            <table className="min-w-2/3 text-sm text-gray-500 dark:text-gray-400">
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 text-center">
                     <tr>
                         <th scope="col" className="py-3 px-6 text-xl" colspan="7">
@@ -276,7 +279,9 @@ function CryptoTable() {
                 </tbody>
             </table>
         </div>
-
+</div>
+</div>
+</div>
     )
 }
 
