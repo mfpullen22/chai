@@ -10,6 +10,9 @@ import Legend from "./legend";
 function Map() {
     const [onselect, setOnselect] = useState({});
     /* function determining what should happen onmouseover, this function updates our state*/
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
     const highlightFeature = (e=> {
         //var layer = e.target;
         const { 
@@ -63,7 +66,7 @@ function Map() {
             //mousedown: highlightFeature,
         });
         //const cm_cases = Math.floor(parseInt((feature.properties.total_crag_pos_with_cm.replace(/,/g,"")))/10)*10;
-        layer.bindTooltip(`<div><b>Country:</b> ${feature.properties.ADMIN}<p><b>Cryptococcal Meningitis Cases (2020):</b> ${feature.properties.total_crag_pos_with_cm_string ? (feature.properties.total_crag_pos_with_cm > 10 ? Math.floor(feature.properties.total_crag_pos_with_cm / 10) * 10 : feature.properties.total_crag_pos_with_cm) : "No data"}</p></div>`, 
+        layer.bindTooltip(`<div><b>Country:</b> ${feature.properties.ADMIN}<p><b>Cryptococcal Meningitis Cases (2020):</b> ${feature.properties.total_crag_pos_with_cm_string ? (feature.properties.total_crag_pos_with_cm > 10 ? numberWithCommas(Math.floor(feature.properties.total_crag_pos_with_cm / 10) * 10) : numberWithCommas(feature.properties.total_crag_pos_with_cm)) : "No data"}</p></div>`, 
             {
                 direction: "top",
                 sticky: true,
@@ -166,23 +169,23 @@ function Map() {
                     <div className="px-4 py-5 sm:p-6">
                         <ul>
                             <li><strong>{onselect.country}</strong></li>
-                            <li className="text-left px-2"><u>Total Crag+</u>: {onselect.cragPos ? (onselect.cragPos > 10 ? Math.floor(((onselect.cragPos)/10))*10 : onselect.cragPos) : "No data"}</li>
-                            <li className="text-left px-2"><u>CrAg+ on ART</u>: {onselect.cragPosART ? `${onselect.cragPosART > 10 ? Math.floor(((onselect.cragPosART)/10))*10 : onselect.cragPosART} (${(100 - Math.ceil((onselect.cragPosART/onselect.cragPos*100))).toString()}%)` : "No data"}</li>
-                            <li className="text-left px-2"><u>Cryptococcal Meningitis</u>: {onselect.crypto ? (onselect.crypto > 10 ? Math.floor(((onselect.crypto)/10))*10 : onselect.crypto) : "No data"}</li>
-                            <li className="text-left px-2"><u>Cryptococcal Deaths</u>: {onselect.deaths ? (onselect.deaths > 10 ? Math.floor(((onselect.deaths)/10))*10 : onselect.deaths) : "No data"}</li>
-                            <li className="text-left px-2"><u>CrAg+, CD4 &lt; 200</u>: {onselect.cragPrev ? onselect.cragPrev : "No data"}</li>
+                            <li className="text-left px-2"><u>Total number of persons CrAg positive</u>: {onselect.cragPos ? (onselect.cragPos > 10 ? numberWithCommas(Math.floor(((onselect.cragPos)/10))*10) : numberWithCommas(onselect.cragPos)) : "No data"}</li>
+                            <li className="text-left px-2"><u>CrAg positive on ART</u>: {onselect.cragPosART ? `${onselect.cragPosART > 10 ? numberWithCommas(Math.floor(((onselect.cragPosART)/10))*10) : numberWithCommas(onselect.cragPosART)} (${(100 - Math.ceil((onselect.cragPosART/onselect.cragPos*100))).toString()}%)` : "No data"}</li>
+                            <li className="text-left px-2"><u>Persons with Cryptococcal Meningitis</u>: {onselect.crypto ? (onselect.crypto > 10 ? numberWithCommas(Math.floor(((onselect.crypto)/10))*10) : numberWithCommas(onselect.crypto)) : "No data"}</li>
+                            <li className="text-left px-2"><u>Cryptococcal Deaths</u>: {onselect.deaths ? (onselect.deaths > 10 ? numberWithCommas(Math.floor(((onselect.deaths)/10))*10) : numberWithCommas(onselect.deaths)) : "No data"}</li>
+                            <li className="text-left px-2"><u>CrAg prevalence among persons with CD4 &lt; 200 cells/mcL</u>: {onselect.cragPrev ? onselect.cragPrev : "No data"}</li>
+                            <li className="text-left px-2"><u>Cost of CrAg screening all with CD4 &lt; 200 cells/mcL</u>: {onselect.costScreening ? `${onselect.costScreening}` : "No data"}</li>
+                            <li className="text-left px-2"><u>Cost of treating all persons with cryptococcal meningitis</u>: {onselect.costTreatment ? `${onselect.costTreatment}` : "No data"}</li>
                             <br />
-                            <li className="text-left px-2"><u>People living with HIV - Adults (15+)</u>: {onselect.hiv ? onselect.hiv : "No data"}</li>
+                            <li><strong>HIV statistics for {onselect.country}</strong></li>
+                            <li className="text-left px-2"><u>Adults living with HIV (15+)</u>: {onselect.hiv ? onselect.hiv : "No data"}</li>
                             <li className="text-left px-2"><u>People living with HIV who know their status (%)</u>: {onselect.numKnow ? `${onselect.numKnow} (${onselect.percentKnow})` : "No data"}</li>
 {/*                         <li className="text-left px-8"><u>HIV+, on ART</u>: {onselect.onART ? `${onselect.onART} (${onselect.percentART}%)` : "No data"}</li>
                             <li className="text-left px-8"><u>HIV+, CD4 &lt; 200</u>: {onselect.CD4 ? `${onselect.CD4} (${onselect.percentCD4})` : "No data"}</li>
  */}                          
-                            <li className="text-left px-2"><u>People living with HIV receiving ART - Adults (15+)</u>: {onselect.onART ? `${onselect.onART} (${Math.ceil(parseInt((onselect.onART.replace(/,/g,""))/parseInt(onselect.hiv.replace(/,/g,""))*100)).toString()}%)` : "No data"}</li>
-                            <li className="text-left px-2"><u>Adults living with HIV with CD4 cell count &lt; 200 cells/mcL</u>: {onselect.CD4 ? `${onselect.CD4} (${onselect.percentCD4})` : "No data"}</li>
+                            <li className="text-left px-2"><u>Adults living with HIV who are receiving ART (15+)</u>: {onselect.onART ? `${onselect.onART} (${Math.ceil(parseInt((onselect.onART.replace(/,/g,""))/parseInt(onselect.hiv.replace(/,/g,""))*100)).toString()}%)` : "No data"}</li>
+                            <li className="text-left px-2"><u>Adults with advanced HIV (CD4 &lt; 200)</u>: {onselect.CD4 ? `${onselect.CD4} (${onselect.percentCD4})` : "No data"}</li>
                             {/* <li className="text-left px-8"><u>CrAg+, CD4 &lt; 200</u>: {onselect.cragPrev ? onselect.cragPrev : "No data"}</li> */}
-                            <br />
-                            <li className="text-left px-2"><u>Cost of CrAg screening for all with CD4 cell count &lt; 200 cells/mcL</u>: {onselect.costScreening ? `${onselect.costScreening}` : "No data"}</li>
-                            <li className="text-left px-2"><u>Cost of treating cryptococcal meningitis</u>: {onselect.costTreatment ? `${onselect.costTreatment}` : "No data"}</li>
                         </ul>{/* Content goes here */}</div>
                     <div className="px-4 py-4 sm:px-6 ">
                         <ul>
