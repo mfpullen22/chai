@@ -10,7 +10,7 @@ function CryptoTable() {
             <table className="min-w-2/3 text-sm text-gray-500 dark:text-gray-400">
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 text-center">
                     <tr>
-                        <th scope="col" className="py-3 px-6 text-xl" colspan="7">
+                        <th scope="col" className="py-3 px-6 text-xl" colSpan="7">
                         Regional Estimates of Burden of Cryptococcosis
                         </th>
                     </tr>
@@ -58,23 +58,23 @@ function CryptoTable() {
                             --
                         </td>
                     </tr>
-                    <tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
+                    <tr className="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
                             Eastern & Southern Africa
                         </th>
-                        <td class="py-4 px-6 text-center">
+                        <td className="py-4 px-6 text-center">
                             <p>75,000</p>
                             <p>(IQR 55,000 to 95,000)</p>
                         </td>
-                        <td class="py-4 px-6 text-center">
+                        <td className="py-4 px-6 text-center">
                             <p>63,000</p>
                             <p>(IQR 45,000 to 80,000)</p>
                         </td>
-                        <td class="py-4 px-6 text-center">
+                        <td className="py-4 px-6 text-center">
                             <p>55,000</p>
                             <p>(IQR 39,000 to 70,000)</p>
                         </td>
-                        <td class="py-4 px-6 text-center">
+                        <td className="py-4 px-6 text-center">
                             <p>21%</p>
                             <p>(IQR 15% to 28%)</p>
                         </td>
@@ -112,23 +112,23 @@ function CryptoTable() {
                             $19,775,598
                         </td>
                     </tr>
-                    <tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
+                    <tr className="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
                             Asia & Pacific
                         </th>
-                        <td class="py-4 px-6 text-center">
+                        <td className="py-4 px-6 text-center">
                             <p>51,000</p>
                             <p>(IQR 42,000 to 60,000)</p>
                         </td>
-                        <td class="py-4 px-6 text-center">
+                        <td className="py-4 px-6 text-center">
                             <p>44,000</p>
                             <p>(IQR 35,000 to 51,000)</p>
                         </td>
-                        <td class="py-4 px-6 text-center">
+                        <td className="py-4 px-6 text-center">
                             <p>25,000</p>
                             <p>(IQR 21,000 to 30,000)</p>
                         </td>
-                        <td class="py-4 px-6 text-center">
+                        <td className="py-4 px-6 text-center">
                             <p>20%</p>
                             <p>(IQR 13% to 22%)</p>
                         </td>
@@ -167,23 +167,23 @@ function CryptoTable() {
                             --
                         </td>
                     </tr>
-                    <tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
+                    <tr className="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
                             Latin America
                         </th>
-                        <td class="py-4 px-6 text-center">
+                        <td className="py-4 px-6 text-center">
                             <p>14,000</p>
                             <p>(IQR 10,000 to 17,000)</p>
                         </td>
-                        <td class="py-4 px-6 text-center">
+                        <td className="py-4 px-6 text-center">
                             <p>12,000</p>
                             <p>(IQR 9,000 to 14,000)</p>
                         </td>
-                        <td class="py-4 px-6 text-center">
+                        <td className="py-4 px-6 text-center">
                             <p>7,000</p>
                             <p>(IQR 5,000 to 9,000)</p>
                         </td>
-                        <td class="py-4 px-6 text-center">
+                        <td className="py-4 px-6 text-center">
                             <p>23%</p>
                             <p>(IQR 16% to 30%)</p>
                         </td>
@@ -222,23 +222,23 @@ function CryptoTable() {
                             $4,874,903
                         </td>
                     </tr>
-                    <tr class="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
+                    <tr className="bg-gray-50 border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
                             Caribbean
                         </th>
-                        <td class="py-4 px-6 text-center">
+                        <td className="py-4 px-6 text-center">
                             <p>2,000</p>
                             <p>(IQR 1,700 to 2,300)</p>
                         </td>
-                        <td class="py-4 px-6 text-center">
+                        <td className="py-4 px-6 text-center">
                             <p>1,700</p>
                             <p>(IQR 1,400 to 1,900)</p>
                         </td>
-                        <td class="py-4 px-6 text-center">
+                        <td className="py-4 px-6 text-center">
                             <p>1,000</p>
                             <p>(IQR 800 to 1,100)</p>
                         </td>
-                        <td class="py-4 px-6 text-center">
+                        <td className="py-4 px-6 text-center">
                             <p>19%</p>
                             <p>(IQR 15% to 23%)</p>
                         </td>

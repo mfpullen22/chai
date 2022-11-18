@@ -4,7 +4,7 @@ import {
     MapContainer, 
     GeoJSON, 
     TileLayer} from "react-leaflet";
-import features from "../data/countries.json";
+import features from "../data/countries_v2.json";
 import Legend from "./legend";
 
 function Map() {
@@ -170,7 +170,7 @@ function Map() {
                         <ul>
                             <li><strong>{onselect.country}</strong></li>
                             <li className="text-left px-2"><u>Total number of persons CrAg positive</u>: {onselect.cragPos ? (onselect.cragPos > 10 ? numberWithCommas(Math.floor(((onselect.cragPos)/10))*10) : numberWithCommas(onselect.cragPos)) : "No data"}</li>
-                            <li className="text-left px-2"><u>CrAg positive on ART</u>: {onselect.cragPosART ? `${onselect.cragPosART > 10 ? numberWithCommas(Math.floor(((onselect.cragPosART)/10))*10) : numberWithCommas(onselect.cragPosART)} (${(100 - Math.ceil((onselect.cragPosART/onselect.cragPos*100))).toString()}%)` : "No data"}</li>
+                            <li className="text-left px-2"><u>CrAg positive on ART</u>: {onselect.cragPosART ? `${(onselect.cragPos - onselect.cragPosART) > 10 ? numberWithCommas(Math.floor(((onselect.cragPos - onselect.cragPosART)/10))*10) : numberWithCommas(onselect.cragPos - onselect.cragPosART)} (${(100 - Math.ceil((onselect.cragPosART/onselect.cragPos*100))).toString()}%)` : "No data"}</li>
                             <li className="text-left px-2"><u>Persons with Cryptococcal Meningitis</u>: {onselect.crypto ? (onselect.crypto > 10 ? numberWithCommas(Math.floor(((onselect.crypto)/10))*10) : numberWithCommas(onselect.crypto)) : "No data"}</li>
                             <li className="text-left px-2"><u>Cryptococcal Deaths</u>: {onselect.deaths ? (onselect.deaths > 10 ? numberWithCommas(Math.floor(((onselect.deaths)/10))*10) : numberWithCommas(onselect.deaths)) : "No data"}</li>
                             <li className="text-left px-2"><u>CrAg prevalence among persons with CD4 &lt; 200 cells/mcL</u>: {onselect.cragPrev ? onselect.cragPrev : "No data"}</li>
